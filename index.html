@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVCam</title>
+    <script type="text/javascript" src="./dvcam.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./dvcam.css" />
+</head>
+<body>
+    <header id="page_header">
+        <div id="btn">
+            <button id="btnYeuCau" class="defBtn">Gửi yêu cầu trao đổi</button>
+            <button id="btnIn" class="defBtn" onclick="In_Content('frm')">In trang này</button>
+        </div>
+    </header>
+    <form id="frm" onsubmit="return sendForm();" method="post">
+        <div class="frmgroup" id="grpCb_ten">
+            <label for="cb_ten">Họ tên cán bộ nhập</label>
+            <input id="cb_ten" class="frmControl" type="text" name="cb_ten"/>
+        </div>
+        <div class="frmgroup" id="grpCb_donVi">
+            <label for="cb_donVi">Đơn vị công tác</label>
+            <input id="cb_donVi" class="frmControl" type="text" name="cb_donVi"/>
+        </div>
+        <div class="frmgroup" id="chu_loaiHinh">
+            <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Đại diện Cơ quan, tổ chức')" value="Cơ quan, tổ chức"/>Cơ quan, tổ chức
+            <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Họ tên chủ doanh nghiệp')" value="Doanh nghiệp"/>Doanh nghiệp
+            <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Họ tên chủ hộ')" checked value="Hộ gia đình"/>Hộ gia đình
+        </div>
+        <div class="frmgroup" id="grpChu_ten">
+            <label id="lbl_chu_ten" for="chu_ten">Họ tên chủ hộ</label>
+            <input id="chu_ten" class="frmControl" type="text" name="chu_ten"/>
+        </div>
+        <div class="frmgroup" id="grpChu_diaChi">
+            <label id="lbl_chu_diaChi" for="chu_diaChi">Địa chỉ chủ hộ</label>
+            <input id="chu_diaChi" class="frmControl" type="text" name="chu_diaChi"/>
+        </div>
+        <div class="frmgroup" id="grpChu_sdt">
+            <label id="lblchu_sdt" for="chu_sdt">Số điện thoại chủ hộ</label>
+            <input id="chu_sdt" class="frmControl" type="text" name="chu_sdt"/>
+        </div>
+        <button id="submit_form" type="submit">Gửi thông tin</button>
+    </form>
+
+</body>
+<script>
+    
+</script>
+</html>
