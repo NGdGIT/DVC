@@ -11,7 +11,6 @@ function sendForm() {
     let data = $('#frm').serialize();
     $.ajax({ //Sử dụng Ajax gửi dữ liệu đi
         url: 'https://script.google.com/macros/s/AKfycbx9Rg7L0ThJn3rr5H30qZPyTwZlgVEvQ8-D5qblPdKk8LepLd_EyoVKVPewZEluIVI/exec',
-        type:'POST',
         method: 'GET',
         dataType: 'json',
         data: data,
