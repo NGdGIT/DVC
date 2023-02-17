@@ -11,6 +11,7 @@
     <link type="text/css" rel="stylesheet" href="./dvcam.css" />
 </head>
 <body>
+    <noscript>Bật javascript để sử dụng hết tính năng</noscript>
     <header id="page_header">
         <div id="btn">
             <button id="btnYeuCau" class="defBtn">Gửi yêu cầu trao đổi</button>
@@ -78,16 +79,16 @@
         </div>
         <div class="frmgroup" id="grpcam_loai">
             <label id="lblcam_loai" for="cam_loai">Loại camera</label>
-            <input id="cam_loai" class="frmControl" type=""/>
+            <input id="cam_loai" class="frmControl" type=""/> <!------------------------->
         </div>
         <div class="frmgroup" id="grpcam_hang">
             <label id="lblcam_hang" for="cam_hang">Hãng camera</label>
             <input id="cam_hang" class="frmControl" type="text" name="cam_hang"/>
         </div>
         <div class="frmgroup" id="grpcam_tinhnang">
-            <input id="cam_baodong" type="checkbox" name="cam_baodong"/>
-            <input id="cam_quet360" type="checkbox" name="cam_quet360"/>
-            <input id="cam_hongNgoai" type="checkbox" name="cam_hongNgoai"/>
+            <input id="cam_baodong" type="checkbox" name="cam_baodong"/> Tích hợp báo động
+            <input id="cam_quet360" type="checkbox" name="cam_quet360"/> Có quay quét 360°
+            <input id="cam_hongNgoai" type="checkbox" name="cam_hongNgoai"/> Có hồng ngoại ban đêm
             <label id="lblcam_tinhNang" for="cam_tinhNang">Tính năng khác</label>
             <input id="cam_tinhNang" class="frmControl" type="text" name="cam_tinhNang"/>
         </div>
