@@ -40,7 +40,8 @@ function positionInfo(position){
 function locate(){
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(
-            (position)=> {document.getElementById('mat_toaDo').value = position.coords.latitude + ", " + position.coords.longitude; alert(position.coords.heading);},
+            //(position)=> {document.getElementById('mat_toaDo').value = position.coords.latitude + ", " + position.coords.longitude; },
+            positionInfo(position),
             (error) => {alert(errorInfo(error));},
             { enableHighAccuracy: true, timeout: 5000, maximumAge: 0, }
         );
