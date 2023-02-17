@@ -17,12 +17,18 @@ function positionInfo(position){
     document.getElementById('mat_toaDo').value = position.coords.latitude + ", " 
                                                + position.coords.longitude + ", "
                                                + position.coords.accuracy;
-    var huong = ["Bắc ", "Bắc Đông Bắc ", "Đông Bắc ", "Đông Đông Bắc ",
-                "Đông ", "Đông Đông Nam ", "Đông Nam ", "Nam Đông Nam ",
-                "Nam ", "Nam Tây Nam ", "Tây Nam ", "Tây Tây Nam ", 
-                "Tây ", "Tây Tây Bắc ", "Tây Bắc ", "Bắc Tây Bắc "];
-    document.getElementById('mat_huong').value = huong[Math.round(position.coords.heading / 22.5) % 16] + position.coords.heading + " độ";
-    
+    var h = position.coords.heading;
+    if(h === null) {
+        alert("Không xác định được hướng");
+    }
+    else{
+        var huong = ["Bắc ", "Bắc Đông Bắc ", "Đông Bắc ", "Đông Đông Bắc ",
+                    "Đông ", "Đông Đông Nam ", "Đông Nam ", "Nam Đông Nam ",
+                    "Nam ", "Nam Tây Nam ", "Tây Nam ", "Tây Tây Nam ", 
+                    "Tây ", "Tây Tây Bắc ", "Tây Bắc ", "Bắc Tây Bắc "];
+        document.getElementById('mat_huong').value = huong[Math.round(position.coords.heading / 22.5) % 16]
+                                                   + position.coords.heading + " độ";
+    }
     //switch(position.coords.heading){
     //    case 0:   return "Bắc";
     //    case 90:  return "Đông";
