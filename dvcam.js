@@ -1,7 +1,8 @@
 function locate(){
-    const locInfo = document.querySelector('#locInfo');
     if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition((position)=> { const lat = position.coords.latitude; const long = position.coords.longitude; locInfo.innerHTML = "Lat: "+ lat + "; Long: " + long;});
+        navigator.geolocation.getCurrentPosition((position)=> {
+            document.getElementById('mat_toaDo').value = position.coords.latitude + ", " + position.coords.longitude;
+        });
     }
 }
 
@@ -19,7 +20,7 @@ function sendForm() {
             window.jQuery(this).trigger('reset');
         },
         error: function(jqXHR, textStatus, errorThrown) {
-            alert('Không gửi được thông tin. Hãy thử đăng nhập tài khoản google của trước');
+            alert('Không gửi được thông tin. Hãy thử đăng nhập tài khoản google trước');
             console.log(errorThrown);
         }
     });
@@ -40,6 +41,18 @@ function In_Content(content_id){
 }
 
 function LoaiHinhSelected(str){
-    var lbl = document.getElementById('lbl_chu_ten');
-    lbl.innerText = str;
+    document.getElementById('lbl_chu_ten').innerText = "Họ tên " + str;
+    document.getElementById('lbl_chu_diaChi').innerText = "Địa chỉ " + str;
+    document.getElementById('lblchu_sdt').innerText = "Số điện thoại " + str;
+    document.getElementById('lblCheck').innerText = str + " là người quản lý";
+}
+
+function ChuHoQuanLy()
+{
+    if(document.getElementById('checkChuQuanLy').checked)
+    {
+        document.getElementById('quanLy_ten').value = document.getElementById('chu_ten').value;
+        document.getElementById('quanLy_diaChi').value = document.getElementById('chu_diaChi').value;
+        document.getElementById('quanLy_sdt').value = document.getElementById('chu_sdt').value;
+    }
 }

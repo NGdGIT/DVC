@@ -28,21 +28,73 @@
         </div>
         <div class="frmgroup" id="chu_loaiHinh">
             <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Đại diện Cơ quan, tổ chức')" value="Cơ quan, tổ chức"/>Cơ quan, tổ chức
-            <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Họ tên chủ doanh nghiệp')" value="Doanh nghiệp"/>Doanh nghiệp
-            <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Họ tên chủ hộ')" checked value="Hộ gia đình"/>Hộ gia đình
+            <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Chủ doanh nghiệp')" value="Doanh nghiệp"/>Doanh nghiệp
+            <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Chủ hộ')" checked value="Hộ gia đình"/>Hộ gia đình
         </div>
         <div class="frmgroup" id="grpChu_ten">
             <label id="lbl_chu_ten" for="chu_ten">Họ tên chủ hộ</label>
             <input id="chu_ten" class="frmControl" type="text" name="chu_ten"/>
         </div>
         <div class="frmgroup" id="grpChu_diaChi">
-            <label id="lbl_chu_diaChi" for="chu_diaChi">Địa chỉ chủ hộ</label>
+            <label id="lbl_chu_diaChi" for="chu_diaChi">Địa chỉ Chủ hộ</label>
             <input id="chu_diaChi" class="frmControl" type="text" name="chu_diaChi"/>
         </div>
         <div class="frmgroup" id="grpChu_sdt">
-            <label id="lblchu_sdt" for="chu_sdt">Số điện thoại chủ hộ</label>
+            <label id="lblchu_sdt" for="chu_sdt">Số điện thoại Chủ hộ</label>
             <input id="chu_sdt" class="frmControl" type="text" name="chu_sdt"/>
         </div>
+        <div class="frmgroup" id="grpCheck">
+            <input id="checkChuQuanLy" type="checkbox" onclick="ChuHoQuanLy()"/> 
+            <label id="lblCheck" for="checkChuQuanLy">Chủ hộ là người quản lý</label>
+        </div>
+        <div class="frmgroup" id="grpQuanLy_ten">
+            <label id="lblquanLy_ten" for="quanLy_ten">Họ tên người quản lý</label>
+            <input id="quanLy_ten" class="frmControl" type="text" name="quanLy_ten"/>
+        </div>
+        <div class="frmgroup" id="grpQuanLy_diaChi">
+            <label id="lblquanLy_diaChi" for="quanLy_diaChi">Địa chỉ người quản lý</label>
+            <input id="quanLy_diaChi" class="frmControl" type="text" name="quanLy_diaChi"/>
+        </div>
+        <div class="frmgroup" id="grpQuanLy_sdt">
+            <label id="lblquanLy_sdt" for="quanLy_sdt">Số điện thoại người quản lý</label>
+            <input id="quanLy_sdt" class="frmControl" type="text" name="quanLy_sdt"/>
+        </div>
+        <div class="frmgroup" id="grpmat_ten">
+            <label id="lblmat_ten" for="mat_ten">Tên hoặc thứ tự mắt camera</label>
+            <input id="mat_ten" class="frmControl" type="text" name="mat_ten"/>
+        </div>
+        <div class="frmgroup" id="grpmat_toaDo">
+            <label id="lblmat_toaDo" for="mat_toaDo">Tọa độ lắp mắt camera</label>
+            <input id="mat_toaDo" class="frmControl" type="text" name="mat_toaDo"/>
+            <button id="btnLocation" class="defBtn" onclick="locate()">Lấy tọa độ</button>
+        </div>
+        <div class="frmgroup" id="grpmat_huong">
+            <label id="lblmat_huong" for="mat_huong">Hướng quan sát của mắt camera</label>
+            <input id="mat_huong" class="frmControl" type="text" name="mat_huong"/>
+        </div>
+        <div class="frmgroup" id="grpmat_phamVi">
+            <label id="lblmat_phamVi" for="mat_phamVi">Phạm vi quan sát của mắt camera</label>
+            <input id="mat_phamVi" class="frmControl" type="text" name="mat_phamVi"/>
+        </div>
+        <div class="frmgroup" id="grpcam_loai">
+            <label id="lblcam_loai" for="cam_loai">Loại camera</label>
+            <input id="cam_loai" class="frmControl" type=""/>
+        </div>
+        <div class="frmgroup" id="grpcam_hang">
+            <label id="lblcam_hang" for="cam_hang">Hãng camera</label>
+            <input id="cam_hang" class="frmControl" type="text" name="cam_hang"/>
+        </div>
+        <div class="frmgroup" id="grpcam_tinhnang">
+            <input id="cam_baodong" type="checkbox" name="cam_baodong"/>
+            <input id="cam_quet360" type="checkbox" name="cam_quet360"/>
+            <input id="cam_hongNgoai" type="checkbox" name="cam_hongNgoai"/>
+            <label id="lblcam_tinhNang" for="cam_tinhNang">Tính năng khác</label>
+            <input id="cam_tinhNang" class="frmControl" type="text" name="cam_tinhNang"/>
+        </div>
+        <div class="frmgroup" id="grpcam_SN">
+            
+        </div>
+
         <button id="submit_form" type="submit">Gửi thông tin</button>
     </form>
 
