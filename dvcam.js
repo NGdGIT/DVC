@@ -18,7 +18,7 @@ function positionInfo(position){
                                                + position.coords.longitude + ", "
                                                + position.coords.accuracy;
     var h = position.coords.heading;
-    if(h === null) {
+    if(Object.is(h, null)){
         alert("Không xác định được hướng");
     }
     else{
@@ -26,8 +26,7 @@ function positionInfo(position){
                     "Đông ", "Đông Đông Nam ", "Đông Nam ", "Nam Đông Nam ",
                     "Nam ", "Nam Tây Nam ", "Tây Nam ", "Tây Tây Nam ", 
                     "Tây ", "Tây Tây Bắc ", "Tây Bắc ", "Bắc Tây Bắc "];
-        document.getElementById('mat_huong').value = huong[Math.round(position.coords.heading / 22.5) % 16]
-                                                   + position.coords.heading + " độ";
+        document.getElementById('mat_huong').value = huong[Math.round(h / 22.5) % 16] + h + " độ";
     }
     //switch(position.coords.heading){
     //    case 0:   return "Bắc";
@@ -47,7 +46,7 @@ function locate(){
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(
             //(position)=> {document.getElementById('mat_toaDo').value = position.coords.latitude + ", " + position.coords.longitude; },
-            positionInfo(position),
+            (position) => positionInfo(position),
             (error) => {alert(errorInfo(error));},
             { enableHighAccuracy: true, timeout: 5000, maximumAge: 0, }
         );
