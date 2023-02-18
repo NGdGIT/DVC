@@ -26,20 +26,8 @@ function positionInfo(position){
                     "Đông ", "Đông Đông Nam ", "Đông Nam ", "Nam Đông Nam ",
                     "Nam ", "Nam Tây Nam ", "Tây Nam ", "Tây Tây Nam ", 
                     "Tây ", "Tây Tây Bắc ", "Tây Bắc ", "Bắc Tây Bắc "];
-        document.getElementById('mat_huong').value = huong[Math.round(h / 22.5) % 16] + h + " độ";
+        document.getElementById('mat_huong').value = huong[Math.round(h / 22.5) % 16] + Maht.round(h, 2) + " độ";
     }
-    //switch(position.coords.heading){
-    //    case 0:   return "Bắc";
-    //    case 90:  return "Đông";
-    //    case 180: return "Nam";
-    //    case 270: return "Tây";
-    //    case 45:  return "Đông Bắc";
-    //    case 135: return "Đông Nam";
-    //    case 225: return "Tây Nam";
-    //    case 305: return "Tây Bắc";
-    //}
-    
-
 }
 
 function locate(){

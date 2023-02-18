@@ -79,23 +79,65 @@
         </div>
         <div class="frmgroup" id="grpcam_loai">
             <label id="lblcam_loai" for="cam_loai">Loại camera</label>
-            <input id="cam_loai" class="frmControl" type=""/> <!------------------------->
+            <select id="cam_loai" class="frmControlCbb" name="cam_loai">
+                <option value="Analog">Camera Analog có đầu thu</option>
+                <option value="IP">Camera IP</option>
+                <option value="Khác">Loại khác</option>
+            </select>
         </div>
         <div class="frmgroup" id="grpcam_hang">
             <label id="lblcam_hang" for="cam_hang">Hãng camera</label>
             <input id="cam_hang" class="frmControl" type="text" name="cam_hang"/>
         </div>
         <div class="frmgroup" id="grpcam_tinhnang">
-            <input id="cam_baodong" type="checkbox" name="cam_baodong"/> Tích hợp báo động
-            <input id="cam_quet360" type="checkbox" name="cam_quet360"/> Có quay quét 360°
-            <input id="cam_hongNgoai" type="checkbox" name="cam_hongNgoai"/> Có hồng ngoại ban đêm
-            <label id="lblcam_tinhNang" for="cam_tinhNang">Tính năng khác</label>
-            <input id="cam_tinhNang" class="frmControl" type="text" name="cam_tinhNang"/>
+            <div>
+                <input id="cam_baodong" type="checkbox" name="cam_baodong"/> Tích hợp báo động
+                <input id="cam_quet360" type="checkbox" name="cam_quet360"/> Có quay quét 360°
+                <input id="cam_hongNgoai" type="checkbox" name="cam_hongNgoai"/> Có hồng ngoại ban đêm
+            </div>
+            <div>
+                <label id="lblcam_tinhNang" for="cam_tinhNang">Tính năng khác</label>
+                <input id="cam_tinhNang" class="frmControl" type="text" name="cam_tinhNang"/>
+            </div>
         </div>
         <div class="frmgroup" id="grpcam_SN">
-
+            <label id="lblcam_SN" for="cam_SN">Serial Number (SN)/IP/domain</label>
+            <input id="cam_SN" class="frmControl" type="text" name="cam_SN"/>
         </div>
-
+        <div class="frmgroup" id="grpcam_user">
+            <label id="lblcam_user" for="cam_user">Tên đăng nhập tài khoản</label>
+            <input id="cam_user" class="frmControl" type="text" name="cam_user"/>
+        </div>
+        <div class="frmgroup" id="grpcam_password">
+            <label id="lblcam_password" for="cam_password">Mật khẩu đăng nhập tài khoản</label>
+            <input id="cam_password" class="frmControl" type="text" name="cam_password"/>
+        </div>
+        <div class="frmgroup" id="grpcam_boNho">
+            <label id="lblcam_boNho" for="cam_boNho">Bộ nhớ camera</label>
+            <select id="cam_boNho" class="frmControlCbb" name="cam_boNho">
+                <option value="Ổ cứng">Ổ cứng</option>
+                <option value="Thẻ nhớ">Thẻ nhớ</option>
+                <option value="Đám mây">Đám mây</option>
+            </select>
+            <input id="cam_dungLuong" class="frmControl" type="text" name="cam_dungLuong"/>
+            <label id="lblcam_dungLuong" for="cam_dungLuong" style="font-style: italic;">(GB)</label>
+        </div>
+        <div class="frmgroup" id="grpcam_cheDoLuu">
+            <label id="lblcam_cheDoLuu" for="cam_cheDoLuu">Chế độ lưu trữ</label>
+            <select id="cam_cheDoLuu" class="frmControlCbb" name="cam_cheDoLuu">
+                <option value="Liên tục">Ghi liên tục (24/24)</option>
+                <option value="Cảnh báo">Ghi theo cảnh báo</option>
+                <option value="Theo lịch">Ghi theo lịch</option>
+            </select>
+        </div>
+        <div class="frmgroup" id="grpcam_tgLuu">
+            <label id="lblcam_tgLuu" for="cam_tgLuu">Thời gian lưu tối đa</label>
+            <input id="cam_tgLuu" class="frmControl" type="text" name="cam_tgLuu"/>
+        </div>
+        <div class="frmgroup" id="grpghiChu">
+            <label id="lblghiChu" for="ghiChu">Ghi chú</label>
+            <input id="ghiChu" class="frmControl" type="text" name="ghiChu"/>
+        </div>
         <button id="submit_form" type="submit" >Gửi thông tin</button>
     </form>
 
