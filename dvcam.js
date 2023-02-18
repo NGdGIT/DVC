@@ -50,12 +50,12 @@ function sendForm() {
     let data = $('#frm').serialize();
     $.ajax({ //Sử dụng Ajax gửi dữ liệu đi
         url: 'https://script.google.com/macros/s/AKfycbx9Rg7L0ThJn3rr5H30qZPyTwZlgVEvQ8-D5qblPdKk8LepLd_EyoVKVPewZEluIVI/exec',
-        method: 'GET',
+        method: 'POST',
         dataType: 'json',
         data: data,
         success: function(responseData, textStatus, jqXHR) {
             alert('Đã gửi thông tin thành công');
-            window.jQuery(this).trigger('reset');
+            //window.jQuery(this).trigger('reset');
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert('Không gửi được thông tin. Hãy thử đăng nhập tài khoản google trước');
@@ -64,7 +64,7 @@ function sendForm() {
     });
 
     
-    alert('Success!');
+    //alert('Success!');
 
     return true;
 };
