@@ -37,10 +37,15 @@ form{
     margin-top: 60px;
 }
 
+label, button{
+    font-weight: bold;
+}
+
 .frmgroup{
     position: relative;
     width: 100%;
     display: inline-flexbox;
+    margin: 5px 0 5px 0;
 }
 
 a{
