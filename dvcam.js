@@ -18,6 +18,7 @@ function positionInfo(position){
                                                + position.coords.longitude + ", "
                                                + position.coords.accuracy;
     var h = position.coords.heading;
+    alert(h);
     if(Object.is(h, null)){
         alert("Không xác định được hướng");
     }
@@ -44,25 +45,58 @@ function locate(){
     }
 }
 
+// function sendForm(){
+//     let data = $('#frm').serialize();
+//     //let queryString = (new URLSearchParams(data)).toString();
+//     console.log(data);
+//     let xhr = new XMLHttpRequest();
+//     xhr.open("POST", 'https://script.google.com/macros/s/AKfycbx9Rg7L0ThJn3rr5H30qZPyTwZlgVEvQ8-D5qblPdKk8LepLd_EyoVKVPewZEluIVI/exec', true);
+//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//     /* xhr.onreadystatechange = () => { // Call a function when the state changes.
+//         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//           // Request finished. Do processing here.
+//         }
+//       } */
+//       alert("Đã gửi dữ liệu");
+//       xhr.send(data);
+// }
 
-function sendForm(){
-    let data = $('#frm').serialize();
-    //let queryString = (new URLSearchParams(data)).toString();
-    console.log(data);
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", 'https://script.google.com/macros/s/AKfycbx9Rg7L0ThJn3rr5H30qZPyTwZlgVEvQ8-D5qblPdKk8LepLd_EyoVKVPewZEluIVI/exec', true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    /* xhr.onreadystatechange = () => { // Call a function when the state changes.
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-          // Request finished. Do processing here.
-        }
-      } */
-      alert("Đã gửi dữ liệu");
-      xhr.send(data);
+function Validate()
+{
+    // Kiểm tra dữ liệu đã nhập
+    if(document.querySelector('#cb_ten').value == '')
+    {
+        alert("Không được để trống Họ tên cán bộ nhập");
+        return false;
+    }
+    if(document.querySelector('#cb_donVi').value == '')
+    {
+        alert("Không được để trống Đơn vị công tác");
+        return false;
+    }
+    if(document.querySelector('#chu_ten').value == '')
+    {
+        alert("Không được để trống " + document.querySelector('#lbl_chu_ten').innerText);
+        return false;
+    }
+    if(document.querySelector('#chu_diaChi').value == '')
+    {
+        alert("Không được để trống " + document.querySelector('#lbl_chu_diaChi').innerText);
+        return false;
+    }
+    if(document.querySelector('#mat_toaDo').value == '')
+    {
+        alert("Không được để trống " + document.querySelector('#lblmat_toaDo').innerText);
+        return false;
+    }
+    return true;
 }
 
-
 function sendForm2() {
+    if(!Validate())
+    {
+        return;
+    }
     // đem tất cả dữ liệu trong form id là 'frm' gom thành biến data
     let data = $('#frm').serialize();
     console.log(data);
@@ -82,7 +116,7 @@ function sendForm2() {
     });
 
     
-    //alert('Success!');
+    alert('Đang gửi thông tin');
 
     return true;
 };
