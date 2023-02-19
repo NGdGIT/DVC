@@ -45,12 +45,30 @@ function locate(){
 }
 
 
-function sendForm() {
+function sendForm(){
+    let data = $('#frm').serialize();
+    //let queryString = (new URLSearchParams(data)).toString();
+    console.log(data);
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", 'https://script.google.com/macros/s/AKfycbx9Rg7L0ThJn3rr5H30qZPyTwZlgVEvQ8-D5qblPdKk8LepLd_EyoVKVPewZEluIVI/exec', true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    /* xhr.onreadystatechange = () => { // Call a function when the state changes.
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+          // Request finished. Do processing here.
+        }
+      } */
+      alert("Đã gửi dữ liệu");
+      xhr.send(data);
+}
+
+
+function sendForm2() {
     // đem tất cả dữ liệu trong form id là 'frm' gom thành biến data
     let data = $('#frm').serialize();
+    console.log(data);
     $.ajax({ //Sử dụng Ajax gửi dữ liệu đi
         url: 'https://script.google.com/macros/s/AKfycbx9Rg7L0ThJn3rr5H30qZPyTwZlgVEvQ8-D5qblPdKk8LepLd_EyoVKVPewZEluIVI/exec',
-        method: 'POST',
+        method: "GET",
         dataType: 'json',
         data: data,
         success: function(responseData, textStatus, jqXHR) {

@@ -18,7 +18,7 @@
             <button id="btnIn" class="defBtn" onclick="In_Content('frm')">In trang này</button>
         </div>
     </header>
-    <form id="frm" onsubmit="return sendForm();" method="post">
+    <form id="frm" method="post"> <!--onsubmit="sendForm();" method="post">-->
         <div class="frmgroup" id="grpCb_ten">
             <label for="cb_ten">Họ tên cán bộ nhập</label>
             <input id="cb_ten" class="frmControl" type="text" name="cb_ten"/>
@@ -138,8 +138,8 @@
             <label id="lblghiChu" for="ghiChu">Ghi chú</label>
             <input id="ghiChu" class="frmControl" type="text" name="ghiChu"/>
         </div>
-        <button id="submit_form" type="submit" >Gửi thông tin</button>
-    </form>
+        <button id="submit_form" type="button" onclick="sendForm2()">Gửi thông tin</button>
+    </form> 
 
 </body>
 <script>
