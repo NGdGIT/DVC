@@ -67,8 +67,8 @@ input[type="text"]{
 }
 
 .frmCtrlBtn{
-    margin-top: 10px;
     align-items: center;
-    height: auto;
+    height: 5vh;
     width: 45%;
+    margin: 10px 0 20px 0;
 }
