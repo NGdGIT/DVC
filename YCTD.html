@@ -30,14 +30,14 @@
         </div>
         <div class="frmgroup" id="grpnoiDung">
             <label id="lblnoiDung" for="noiDung">Nội dung trao đổi</label>
-            <input id="noiDung" class = frmControl" type="text" name="noiDung"/>
+            <textarea id="noiDung" class = "frmControl" name="noiDung" ></textarea>
         </div>
         <div class="frmgroup" id="grpghiChu">
             <label id="lblghiChu" for="ghiChu">Ghi chú</label>
             <input id="ghiChu" class="frmControl" type="text" name="ghiChu"/>
         </div>
-        <button id="submit_form" type="button" onclick="sendFormYCTD()">Gửi yêu cầu</button>
-        <button id="btnclear" type="button" onclick="clearForm()">Xóa thông tin</button>
+        <button id="submit_form" class="frmCtrlBtn" type="button" onclick="sendFormYCTD()">Gửi yêu cầu</button>
+        <button id="btnclear" class="frmCtrlBtn" type="button" onclick="clearFormYCTD()">Xóa thông tin</button>
     </form>
 </body>
 </html>

@@ -38,3 +38,9 @@ function sendFormYCTD() {
 
     return true;
 };
+
+
+function clearFormYCTD(){
+    document.getElementById('noiDung').value='';
+    document.getElementById('ghiChu').value='';
+}

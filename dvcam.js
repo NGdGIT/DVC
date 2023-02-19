@@ -132,7 +132,7 @@ function In_Content(content_id){
 function LoaiHinhSelected(str){
     document.getElementById('lbl_chu_ten').innerText = "Họ tên " + str;
     document.getElementById('lbl_chu_diaChi').innerText = "Địa chỉ " + str;
-    document.getElementById('lblchu_sdt').innerText = "Số điện thoại " + str;
+    document.getElementById('lblchu_sdt').innerText = "SĐT " + str;
     document.getElementById('lblCheck').innerText = str + " là người quản lý";
 }
 
