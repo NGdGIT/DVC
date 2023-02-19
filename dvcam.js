@@ -18,9 +18,8 @@ function positionInfo(position){
                                                + position.coords.longitude + ", "
                                                + position.coords.accuracy;
     var h = position.coords.heading;
-    alert(h);
     if(Object.is(h, null)){
-        alert("Không xác định được hướng");
+        alert("Không xác định được hướng\n position.coords.heading = " + h);
     }
     else{
         var huong = ["Bắc ", "Bắc Đông Bắc ", "Đông Bắc ", "Đông Đông Bắc ",
@@ -145,4 +144,28 @@ function ChuHoQuanLy()
         document.getElementById('quanLy_diaChi').value = document.getElementById('chu_diaChi').value;
         document.getElementById('quanLy_sdt').value = document.getElementById('chu_sdt').value;
     }
+}
+
+function clearForm()
+{
+    let cb = document.getElementById('cb_ten').value;
+    let dv = document.getElementById('cb_donVi').value;
+
+    let inputs = document.querySelectorAll('input[type="text"]');
+    if(inputs.length>0)
+    {
+        inputs.forEach(function(item){
+            item.value= '';
+        });
+        document.getElementById('cb_ten').value = cb;
+        document.getElementById('cb_donVi').value = dv;
+    }
+    inputs = document.querySelectorAll('input[type="checkbox"]');
+    if(inputs.length>0)
+    {
+        inputs.forEach(function(item){
+            item.checked = false;
+        });
+    }
+
 }

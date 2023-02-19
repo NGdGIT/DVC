@@ -14,11 +14,11 @@
     <noscript>Bật javascript để sử dụng hết tính năng</noscript>
     <header id="page_header">
         <div id="btn">
-            <button id="btnYeuCau" class="defBtn">Gửi yêu cầu trao đổi</button>
+            <button id="btnYeuCau" class="defBtn" onclick="location.href='./YCTD.html'">Gửi yêu cầu trao đổi</button>
             <button id="btnIn" class="defBtn" onclick="In_Content('frm')">In trang này</button>
         </div>
     </header>
-    <form id="frm" method="post"> <!--onsubmit="sendForm();" method="post">-->
+    <form id="frm" class="frm" method="post"> <!--onsubmit="sendForm();" method="post">-->
         <div class="frmgroup" id="grpCb_ten">
             <label for="cb_ten">Họ tên cán bộ nhập</label>
             <input id="cb_ten" class="frmControl" type="text" name="cb_ten"/>
@@ -132,13 +132,14 @@
         </div>
         <div class="frmgroup" id="grpcam_tgLuu">
             <label id="lblcam_tgLuu" for="cam_tgLuu">Thời gian lưu tối đa</label>
-            <input id="cam_tgLuu" class="frmControl" type="text" name="cam_tgLuu"/>
+            <input id="cam_tgLuu" class="frmControl" type="text" name="cam_tgLuu"/><label style="font-style: italic;"> (ngày)</label>
         </div>
         <div class="frmgroup" id="grpghiChu">
             <label id="lblghiChu" for="ghiChu">Ghi chú</label>
             <input id="ghiChu" class="frmControl" type="text" name="ghiChu"/>
         </div>
         <button id="submit_form" type="button" onclick="sendForm2()">Gửi thông tin</button>
+        <button id="btnclear" type="button" onclick="clearForm()">Xóa thông tin</button>
     </form> 
 
 </body>
