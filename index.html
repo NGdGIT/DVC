@@ -20,11 +20,11 @@
     </header>
     <form id="frm" class="frm" method="post"> <!--onsubmit="sendForm();" method="post">-->
         <div class="frmgroup" id="grpCb_ten">
-            <label for="cb_ten">Họ tên cán bộ nhập</label>
+            <label for="cb_ten">Họ tên cán bộ nhập (*)</label>
             <input id="cb_ten" class="frmControl" type="text" name="cb_ten"/>
         </div>
         <div class="frmgroup" id="grpCb_donVi">
-            <label for="cb_donVi">Đơn vị công tác</label>
+            <label for="cb_donVi">Đơn vị công tác (*)</label>
             <input id="cb_donVi" class="frmControl" type="text" name="cb_donVi"/>
         </div>
         <div class="frmgroup" id="chu_loaiHinh">
@@ -33,11 +33,11 @@
             <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Chủ hộ')" checked value="Hộ gia đình"/>Hộ gia đình
         </div>
         <div class="frmgroup" id="grpChu_ten">
-            <label id="lbl_chu_ten" for="chu_ten">Họ tên chủ hộ</label>
+            <label id="lbl_chu_ten" for="chu_ten">Họ tên chủ hộ (*)</label>
             <input id="chu_ten" class="frmControl" type="text" name="chu_ten"/>
         </div>
         <div class="frmgroup" id="grpChu_diaChi">
-            <label id="lbl_chu_diaChi" for="chu_diaChi">Địa chỉ Chủ hộ</label>
+            <label id="lbl_chu_diaChi" for="chu_diaChi">Địa chỉ Chủ hộ (*)</label>
             <input id="chu_diaChi" class="frmControl" type="text" name="chu_diaChi"/>
         </div>
         <div class="frmgroup" id="grpChu_sdt">
@@ -65,7 +65,7 @@
             <input id="mat_ten" class="frmControl" type="text" name="mat_ten"/>
         </div>
         <div class="frmgroup" id="grpmat_toaDo">
-            <label id="lblmat_toaDo" for="mat_toaDo">Tọa độ lắp mắt camera</label>
+            <label id="lblmat_toaDo" for="mat_toaDo">Tọa độ lắp mắt camera (*)</label>
             <input id="mat_toaDo" class="frmControl" type="text" name="mat_toaDo"/>
             <button id="btnLocation" type="button" class="frmCtrlBtn2" onclick="locate()">Lấy tọa độ</button>
         </div>
@@ -86,7 +86,7 @@
             </select>
         </div>-->
         <div class="frmgroup" id="grpcam_hang">
-            <label id="lblcam_hang" for="cam_hang">Hãng camera</label>
+            <label id="lblcam_hang" for="cam_hang">Hãng camera (*)</label>
             <input id="cam_hang" class="frmControl" type="text" name="cam_hang"/>
         </div>
         <div class="frmgroup" id="grpcam_tinhnang">
