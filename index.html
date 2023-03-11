@@ -25,7 +25,32 @@
         </div>
         <div class="frmgroup" id="grpCb_donVi">
             <label for="cb_donVi">Đơn vị công tác (*)</label>
-            <input id="cb_donVi" class="frmControl" type="text" name="cb_donVi"/>
+            <!--<input id="cb_donVi" class="frmControl" type="text" name="cb_donVi"/>-->
+            <select id="cb_donVi" class="frmControlCbb" name="cb_donVi"  >
+                <option value="">--Chọn đơn vị--</option>
+                <option value="CAH_HS">Đội HS</option>
+                <option value="CAH_ĐTTH">Đội ĐTTH</option>
+                <option value="CATT Ninh Giang">CATT Ninh Giang</option>
+                <option value="CAX An Đức">CAX An Đức</option>
+                <option value="CAX Đồng Tâm">CAX Đồng Tâm</option>
+                <option value="CAX Đông Xuyên">CAX Đông Xuyên</option>
+                <option value="CAX Hiệp Lực">CAX Hiệp Lực</option>
+                <option value="CAX Hồng Dụ">CAX Hồng Dụ</option>
+                <option value="CAX Hồng Đức">CAX Hồng Đức</option>
+                <option value="CAX Hồng Phong">CAX Hồng Phong</option>
+                <option value="CAX Hồng Phúc">CAX Hồng Phúc</option>
+                <option value="CAX Hưng Long">CAX Hưng Long</option>
+                <option value="CAX Kiến Quốc">CAX Kiến Quốc</option>
+                <option value="CAX Ninh Hải">CAX Ninh Hải</option>
+                <option value="CAX Nghĩa An">CAX Nghĩa An</option>
+                <option value="CAX Tân Hương">CAX Tân Hương</option>
+                <option value="CAX Tân Phong">CAX Tân Phong</option>
+                <option value="CAX Tân Quang">CAX Tân Quang</option>
+                <option value="CAX Ứng Hòe">CAX Ứng Hòe</option>
+                <option value="CAX Vạn Phúc">CAX Vạn Phúc</option>
+                <option value="CAX Văn Hội">CAX Văn Hội</option>
+                <option value="CAX Vĩnh Hòa">CAX Vĩnh Hòa</option>
+            </select>
         </div>
         <div class="frmgroup" id="chu_loaiHinh">
             <input class="frmControl" type="radio" name="chu_loaiHinh" onclick="LoaiHinhSelected('Đại diện Cơ quan, tổ chức')" value="Cơ quan, tổ chức"/>Cơ quan, tổ chức
