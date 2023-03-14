@@ -73,6 +73,14 @@ function Validate()
         alert("Không được để trống Đơn vị công tác");
         return false;
     }
+    if(document.getElementById('grpchu_tencq').innerHTML !='')
+    {
+        if(document.querySelector('#chu_tencq').value=='')
+        {
+            alert("Không được để trống " + document.querySelector('#lbl_chu_tencq').innerText);
+            return false;
+        }
+    }
     if(document.querySelector('#chu_ten').value == '')
     {
         alert("Không được để trống " + document.querySelector('#lbl_chu_ten').innerText);
@@ -93,7 +101,7 @@ function Validate()
         alert("Không được để trống " + document.querySelector('#lblcam_hang').innerText);
         return false;
     }
-    if(document.querySelector('#cam_user').value + document.querySelector('#cam_password')!='')
+    if(document.querySelector('#cam_user').value + document.querySelector('#cam_password').value !='')
     {
         if(document.querySelector('#cam_SN').value=='')
         {
@@ -143,10 +151,21 @@ function In_Content(content_id){
 }
 
 function LoaiHinhSelected(str){
-    document.getElementById('lbl_chu_ten').innerText = "Họ tên " + str;
-    document.getElementById('lbl_chu_diaChi').innerText = "Địa chỉ " + str;
-    document.getElementById('lblchu_sdt').innerText = "SĐT " + str;
+    document.getElementById('lbl_chu_ten').innerText = "Họ tên " + str + " (*)";
+    document.getElementById('lbl_chu_diaChi').innerText = "Địa chỉ " + str + " (*)";
+    document.getElementById('lblchu_sdt').innerText = "SĐT " + str + " (*)";
     document.getElementById('lblCheck').innerText = str + " là người quản lý";
+    switch(str)
+    {
+        case 'Đại diện Cơ quan, tổ chức':
+            document.getElementById('grpchu_tencq').innerHTML = "<label id=\"lbl_chu_tencq\" for=\"chu_tencq\">Tên Cơ quan, tổ chức (*)</label> <input id=\"chu_tencq\" class=\"frmControl\" type=\"text\" name=\"chu_tencq\"/>";
+            break;
+        case 'Chủ doanh nghiệp':
+            document.getElementById('grpchu_tencq').innerHTML = "<label id=\"lbl_chu_tencq\" for=\"chu_tencq\">Tên Doanh nghiệp (*)</label> <input id=\"chu_tencq\" class=\"frmControl\" type=\"text\" name=\"chu_tencq\"/>";
+            break;
+        default:
+            document.getElementById('grpchu_tencq').innerHTML = "";
+    }
 }
 
 function ChuHoQuanLy()

@@ -57,7 +57,7 @@ input[type="text"]{
     align-items: flex-end;
     border: none;
     border-bottom: 1px dotted blue;
-    width: 80%;
+    width: 100%;
     text-align: justify;
     word-wrap: normal;
     line-break: auto;    
