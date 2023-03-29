@@ -96,13 +96,15 @@ function Validate()
         alert("Không được để trống " + document.querySelector('#lblmat_toaDo').innerText);
         return false;
     }
-    if(document.querySelector('#cam_hang').value == '')
-    {
-        alert("Không được để trống " + document.querySelector('#lblcam_hang').innerText);
-        return false;
-    }
+    
     if(document.querySelector('#cam_user').value + document.querySelector('#cam_password').value !='')
     {
+        if(document.querySelector('#cam_hang').value == '')
+        {
+            alert("Không được để trống " + document.querySelector('#lblcam_hang').innerText);
+            return false;
+        }
+
         if(document.querySelector('#cam_SN').value=='')
         {
             alert("Chưa có " + document.querySelector('#lblcam_SN').innerText);
