@@ -34,7 +34,10 @@ function sendFormYCTD() {
     });
 
     
-    alert('Đang gửi thông tin');
+    document.querySelector("#submit_form").innerText = "Đang gửi đi...";
+    setTimeout(() => {
+        document.querySelector("#submit_form").innerText = "Gửi thông tin";
+    }, 2000);//alert('Đang gửi thông tin');
 
     return true;
 };

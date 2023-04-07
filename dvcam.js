@@ -19,7 +19,7 @@ function positionInfo(position){
                                                + position.coords.accuracy;
     var h = position.coords.heading;
     if(Object.is(h, null)){
-        alert("Không xác định được hướng\n position.coords.heading = " + h);
+        //alert("Không xác định được hướng\n position.coords.heading = " + h);
     }
     else{
         var huong = ["Bắc ", "Bắc Đông Bắc ", "Đông Bắc ", "Đông Đông Bắc ",
@@ -137,8 +137,10 @@ function sendForm2() {
         }
     });
 
-    
-    alert('Đang gửi thông tin');
+    document.querySelector("#submit_form").innerText = "Đang gửi đi...";
+    setTimeout(() => {
+        document.querySelector("#submit_form").innerText = "Gửi thông tin";
+    }, 2000); //alert('Đang gửi thông tin');
 
     return true;
 };
