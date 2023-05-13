@@ -5,6 +5,10 @@ html, body{
     height: 100%;
 }
 
+body{
+    background-color: #136a8a;
+}
+
 #page_header{
     position: fixed;
     margin-bottom: auto;
@@ -31,10 +35,29 @@ div#btn{
 }
 
 form{
+    background-color: #ffffff;
     display: inline-block;
     position:absolute;
-    width: 100%;
+    padding: 15px;
+    border: blue, 2px;
+    border-radius: 8px;
+    box-shadow: 
+        0px 2px 10px rgba(0,0,0,0.2), 
+        0px 10px 20px rgba(0,0,0,0.3), 
+        0px 30px 60px 1px rgba(0,0,0,0.5);
+    
     margin-top: 60px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+@media screen and (orientation: portrait){
+    form{
+        width: 90%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
 }
 
 label, button{
