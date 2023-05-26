@@ -55,7 +55,7 @@ form{
 @media screen and (orientation: portrait){
     form{
         width: 90%;
-        margin-left: 4%;
+        margin-left: 3%;
         margin-right: 4%;
     }
 }
